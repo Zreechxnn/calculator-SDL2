@@ -3,46 +3,37 @@
 
 A simple calculator application developed using SDL2 and SDL_ttf. This calculator includes various mathematical functions and operations, such as square root, pi, exponentiation, trigonometric functions, and basic arithmetic operations.
 
-## Features
-
-- **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
-- **Mathematical Functions**: Square root, exponentiation, factorial, and more.
-- **Trigonometric Functions**: Sine, cosine, and tangent.
-- **Advanced Features**: Decimal points, parentheses, percentage calculations, and more.
-
-## Getting Started
-
-### Prerequisites
-
+Features
+Basic Arithmetic Operations: Addition, subtraction, multiplication, and division.
+Mathematical Functions: Square root, exponentiation, factorial, and more.
+Trigonometric Functions: Sine, cosine, and tangent.
+Advanced Features: Decimal points, parentheses, percentage calculations, and more.
+Getting Started
+Prerequisites
 To build and run this project, you need to have the following installed:
 
-- SDL2
-- SDL2_ttf
-
+SDL2
+SDL2_ttf
 You can install these libraries using your package manager or from the official SDL website.
 
-### Installation
+Installation
+Clone the repository:
 
-1. **Clone the repository**:
-
-   ```sh
-   git clone https://github.com/Zreechxnn/calculator-SDL2.git
-   cd calculator-SDL2
+sh
+Copy code
+git clone https://github.com/Zreechxnn/calculator-SDL2.git
+cd calculator-SDL2
 Install dependencies:
 
-On Ubuntu/Debian-based systems, you can install SDL2 and SDL2_ttf using:
-
+On Ubuntu/Debian-based systems:
 sh
 Copy code
 sudo apt-get install libsdl2-dev libsdl2-ttf-dev
 On Fedora-based systems:
-
 sh
 Copy code
 sudo dnf install SDL2-devel SDL2_ttf-devel
 Build the project:
-
-You can use gcc to compile the project:
 
 sh
 Copy code
