@@ -26,8 +26,8 @@ You can install these libraries using your package manager or from the official 
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/yourusername/sdl2-calculator.git
-   cd sdl2-calculator
+   git clone https://github.com/Zreechxnn/calculator-SDL2.git
+   cd calculator-SDL2
 Install dependencies:
 
 On Ubuntu/Debian-based systems, you can install SDL2 and SDL2_ttf using:
