@@ -75,6 +75,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [SDL2](https://www.libsdl.org/) - Simple DirectMedia Layer
 - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/) - SDL2 font rendering library
 
----
 
-Sekarang, perintah dan tautan sudah dalam format teks biasa, sehingga mudah untuk dicopy dan paste dari README.md.
