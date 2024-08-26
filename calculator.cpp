@@ -7,7 +7,8 @@
 #include <ctype.h>
 #include <math.h>
 
-// Button structure
+
+
 struct Button {
     SDL_Rect rect;
     char label[10];
