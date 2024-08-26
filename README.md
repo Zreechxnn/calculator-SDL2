@@ -2,6 +2,7 @@
 # SDL2 Calculator
 
 
+
 A simple calculator application developed using SDL2 and SDL_ttf. This calculator includes various mathematical functions and operations, such as square root, pi, exponentiation, trigonometric functions, and basic arithmetic operations.
 ![image](https://e.top4top.io/p_31596566j1.png)
 
