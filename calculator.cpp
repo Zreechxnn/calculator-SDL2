@@ -44,7 +44,6 @@ void drawText(SDL_Renderer* renderer, TTF_Font* font, const char* text, SDL_Colo
     SDL_FreeSurface(surface);
 }
 
-// Function to evaluate the expression (simplified for the example)
 double evaluateExpression(const char* expression) {
     double result = 0;
     char op = 0;
