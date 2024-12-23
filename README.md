@@ -61,7 +61,7 @@ You can install these libraries using your package manager or from the official 
 
 ## Troubleshooting
 
-- **Font Issues**: Ensure `arial.ttf` is present in the same directory as the executable or adjust the path in the source code.
+- **Font Issues**: Ensure 'lonely.ttf` is present in the same directory as the executable or adjust the path in the source code.
 - **Library Errors**: Verify that SDL2 and SDL2_ttf libraries are installed and properly linked during compilation.
 
 ## Contributing
