@@ -56,7 +56,7 @@ You can install these libraries using your package manager or from the official 
 ## Usage
 
 - **Basic Operations**: Click the buttons to input numbers and operators. Click the `=` button to calculate the result.
-- **Advanced Functions**: Use buttons like `sqrt`, `pi`, `^`, `!`, `deg`, `sin`, `cos`, `tan`, and `AD` for advanced calculations.
+- **Advanced Functions**: Use buttons like `sqrt`, `pi`, `^`, `!`, `deg`, `sin`, `cos`, `tan`, and `AD` for advanced calculations (coming soon) .
 - **Clear and Delete**: Click `D` to delete the last character and `0` to reset the input.
 
 ## Troubleshooting
