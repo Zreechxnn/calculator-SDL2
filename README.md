@@ -6,6 +6,14 @@
 A simple calculator application developed using SDL2 and SDL_ttf. This calculator includes various mathematical functions and operations, such as square root, pi, exponentiation, trigonometric functions, and basic arithmetic operations.
 ![image](https://e.top4top.io/p_31596566j1.png)
 
+## ⚠️ Disclaimer  
+
+The code in this repository is intended **only for developers** with a basic understanding of programming. Please use it responsibly and for development purposes only.
+
+- **Not recommended for direct use in production environments without thorough testing.**  
+- No guarantees are provided regarding the absence of bugs or errors.  
+- The author is not liable for any damages or issues caused
+
 ## Features
 
 - **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
