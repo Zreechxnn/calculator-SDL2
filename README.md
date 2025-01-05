@@ -86,5 +86,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/) - SDL2 font rendering library
 
 
-made by rechan dinata
+<p align="center">©️ 2024 Rechan Dinata</p>
 
