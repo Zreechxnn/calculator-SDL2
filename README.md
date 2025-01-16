@@ -12,7 +12,7 @@
 
 
 <details>
-  <summary>## ⚠️ Disclaimer</summary>
+  <summary>⚠️Disclaimer</summary>
   
 The code in this repository is intended **only for developers** with a basic understanding of programming. Please use it responsibly and for development purposes only.
 
