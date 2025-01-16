@@ -9,18 +9,6 @@
 ![image](https://e.top4top.io/p_31596566j1.png)
 
 </details>
-
-
-<details>
-  <summary>⚠️Disclaimer</summary>
-  
-The code in this repository is intended **only for developers** with a basic understanding of programming. Please use it responsibly and for development purposes only.
-
-- **Not recommended for direct use in production environments without thorough testing.**  
-- No guarantees are provided regarding the absence of bugs or errors.  
-- The author is not liable for any damages or issues caused 
-
-</details>
   
 <details>
   <summary>Features</summary>
@@ -98,6 +86,16 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [SDL2](https://www.libsdl.org/) - Simple DirectMedia Layer
 - [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/) - SDL2 font rendering library
 
+<details>
+  <summary>⚠️Disclaimer</summary>
+  
+The code in this repository is intended **only for developers** with a basic understanding of programming. Please use it responsibly and for development purposes only.
+
+- **Not recommended for direct use in production environments without thorough testing.**  
+- No guarantees are provided regarding the absence of bugs or errors.  
+- The author is not liable for any damages or issues caused 
+
+</details> 
 
 <p align="center">©️ 2024 Rechan Dinata</p>
 
