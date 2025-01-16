@@ -24,10 +24,12 @@ The code in this repository is intended **only for developers** with a basic und
   
 <details>
   <summary>Features</summary>
+
 - **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
 - **Mathematical Functions**: Square root, exponentiation, factorial, and more.
 - **Trigonometric Functions**: Sine, cosine, and tangent.
 - **Advanced Features**: Decimal points, parentheses, percentage calculations, and more.
+
 </details>
 
 
