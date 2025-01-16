@@ -11,13 +11,17 @@
 </details>
 
 
-## ⚠️ Disclaimer  
-
+<details>
+  <summary>## ⚠️ Disclaimer</summary>
+  
 The code in this repository is intended **only for developers** with a basic understanding of programming. Please use it responsibly and for development purposes only.
 
 - **Not recommended for direct use in production environments without thorough testing.**  
 - No guarantees are provided regarding the absence of bugs or errors.  
-- The author is not liable for any damages or issues caused
+- The author is not liable for any damages or issues caused 
+
+</details>
+  
 
 ## Features
 
