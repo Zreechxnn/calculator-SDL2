@@ -21,17 +21,17 @@
 </details>
 
 
-
-## Getting Started
-
-### Prerequisites
-
-To build and run this project, you need to have the following installed:
+<details>
+  <summary>Getting Started</summary>
+  To build and run this project, you need to have the following installed:
 
 - SDL2
 - SDL2_ttf
 
 You can install these libraries using your package manager or from the official SDL website.
+
+</details>
+
 
 ### Installation
 
