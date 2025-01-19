@@ -32,10 +32,10 @@ You can install these libraries using your package manager or from the official 
 
 </details>
 
+<details>
+  <summary>Instalation</summary>
 
-### Installation
-
-1. **Clone the repository**:
+  1. **Clone the repository**:
    ```bash
    git clone https://github.com/Zreechxnn/calculator-SDL2.git
    cd calculator-SDL2
@@ -61,6 +61,8 @@ You can install these libraries using your package manager or from the official 
    ```bash
    ./calculator
    ```
+
+</details>
 
 ## Usage
 
