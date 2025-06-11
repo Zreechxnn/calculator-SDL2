@@ -1,7 +1,3 @@
-emcc *.cpp -o kalkulator.html \
-  -s USE_SDL=2 \
-  -s USE_SDL_TTF=2 \
-  --preload-file assets \
-  -s ALLOW_MEMORY_GROWTH=1 \
-  -s ASYNCIFY \
-  -O3
+ZW1jYyAqLmNwcCAtbyBrYWxrdWxhdG9yLmh0bWwgICAtcyBVU0VfU0RMPTIgICAtcyBVU0VfU0RM
+X1RURj0yICAgLS1wcmVsb2FkLWZpbGUgYXNzZXRzICAgLXMgQUxMT1dfTUVNT1JZX0dST1dUSD0x
+ICAgLXMgQVNZTkNJRlkgICAtTzMK
