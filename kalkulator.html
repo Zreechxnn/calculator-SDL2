@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>calculator</title>
+    <style>
+        body {
+            font-family: arial;
+            margin: 0;
+            padding: none;
+        }
+        .emscripten {
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        div.emscripten {
+            text-align: center;
+        }
+        div.emscripten_border {
+            border: 1px solid #000;
+        }
+        canvas.emscripten {
+            border: 0 none;
+            background-color: #000;
+        }
+        #emscripten_logo {
+            display: inline-block;
+            margin: 0;
+            padding: 6px;
+            width: 265px;
+        }
+        .spinner {
+            height: 30px;
+            width: 30px;
+            margin: 0;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+            -webkit-animation: rotation .8s linear infinite;
+            -moz-animation: rotation .8s linear infinite;
+            -o-animation: rotation .8s linear infinite;
+            animation: rotation .8s linear infinite;
+            border-left: 5px solid #ebebeb;
+            border-right: 5px solid #ebebeb;
+            border-bottom: 5px solid #ebebeb;
+            border-top: 5px solid #787878;
+            border-radius: 100%;
+            background-color: #bdd72e;
+        }
+        @-webkit-keyframes rotation {
+            from { -webkit-transform: rotate(0); }
+            to { -webkit-transform: rotate(360deg); }
+        }
+        @-moz-keyframes rotation {
+            from { -moz-transform: rotate(0); }
+            to { -moz-transform: rotate(360deg); }
+        }
+        @-o-keyframes rotation {
+            from { -o-transform: rotate(0); }
+            to { -o-transform: rotate(360deg); }
+        }
+        @keyframes rotation {
+            from { transform: rotate(0); }
+            to { transform: rotate(360deg); }
+        }
+        #status {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 20px;
+            font-weight: 700;
+            color: #787878;
+        }
+        #progress {
+            height: 20px;
+            width: 300px;
+        }
+        #controls {
+            display: inline-block;
+            float: right;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        #output {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border-left: 0;
+            border-right: 0px;
+            padding-left: 0;
+            padding-right: 0;
+            display: block;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Lucida Console', Monaco, monospace;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner" id="spinner"></div>
+    <div class="emscripten" id="status">Downloading...</div>
+    <div class="emscripten">
+        <progress hidden id="progress" max="100" value="0"></progress>
+    </div>
+    <div class="emscripten_border">
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+    </div>
+    <textarea id="output" rows="8"></textarea>
+
+    <script>
+        var statusElement = document.getElementById("status"),
+            progressElement = document.getElementById("progress"),
+            spinnerElement = document.getElementById("spinner"),
+            canvasElement = document.getElementById("canvas"),
+            outputElement = document.getElementById("output");
+
+        if (outputElement) outputElement.value = "";
+
+        canvasElement.addEventListener("webglcontextlost", function(e) {
+            alert("WebGL context lost. You will need to reload the page.");
+            e.preventDefault();
+        }, false);
+
+        var Module = {
+            print: function(...args) {
+                console.log(...args);
+                if (outputElement) {
+                    var text = args.join(" ");
+                    outputElement.value += text + "\n";
+                    outputElement.scrollTop = outputElement.scrollHeight;
+                }
+            },
+            canvas: canvasElement,
+            setStatus: function(text) {
+                Module.setStatus.last = Module.setStatus.last || { time: Date.now(), text: "" };
+                
+                if (text !== Module.setStatus.last.text) {
+                    var match = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+                    var now = Date.now();
+                    
+                    if (!match || now - Module.setStatus.last.time > 30) {
+                        Module.setStatus.last.time = now;
+                        Module.setStatus.last.text = text;
+                        
+                        if (match) {
+                            statusElement.innerHTML = match[1];
+                            progressElement.value = parseInt(match[2]) * 100;
+                            progressElement.max = parseInt(match[4]) * 100;
+                            progressElement.hidden = false;
+                            spinnerElement.hidden = false;
+                        } else {
+                            progressElement.value = null;
+                            progressElement.max = null;
+                            progressElement.hidden = true;
+                            
+                            if (!text) {
+                                spinnerElement.style.display = "none";
+                            }
+                            statusElement.innerHTML = text;
+                        }
+                    }
+                }
+            },
+            totalDependencies: 0,
+            monitorRunDependencies: function(left) {
+                this.totalDependencies = Math.max(this.totalDependencies, left);
+                Module.setStatus(left ? 
+                    "Preparing... (" + (this.totalDependencies - left) + "/" + this.totalDependencies + ")" : 
+                    "All downloads complete."
+                );
+            }
+        };
+
+        Module.setStatus("Downloading...");
+
+        window.onerror = function(error) {
+            Module.setStatus("Exception thrown, see JavaScript console");
+            spinnerElement.style.display = "none";
+            Module.setStatus = function(text) {
+                if (text) console.error("[post-exception status] " + text);
+            };
+        };
+    </script>
+    <script async src="kalkulator.js"></script>
+</body>
+</html>
